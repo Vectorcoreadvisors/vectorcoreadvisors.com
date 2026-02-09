@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Vector Core Advisors</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* High-End Hero Styling */
+      .hero-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Darkening the whole image slightly to help the glass boxes pop */
+      .hero-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .hero-text {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        text-align: center;
+        max-width: 900px;
+        padding: 20px;
+      }
+
+      /* The "Million Dollar" Glass Box for the Main Title */
+      .glass-box {
+        background: rgba(255, 255, 255, 0.08); /* Super light white */
+        backdrop-filter: blur(12px); /* The "Frosted" effect */
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15); /* Thin elegant border */
+        padding: 40px 60px;
+        border-radius: 8px;
+        display: inline-block;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+
+      /* Smaller glass box for the sub-header to create depth */
+      .tagline-box {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.4); /* Darker contrast for the tagline */
+        backdrop-filter: blur(5px);
+        padding: 10px 25px;
+        display: inline-block;
+        border-radius: 4px;
+      }
+
+      .hero-text p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #efefef;
+      }
+
+      .cta-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 35px;
+        background-color: #ffffff;
+        color: #000000 !important;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #000;
+        color: #fff !important;
+        transform: scale(1.05);
+      }
+
+      @media screen and (max-width: 736px) {
+        .hero-text h1 { font-size: 2rem; letter-spacing: 3px; }
+        .glass-box { padding: 25px 30px; }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <div id="wrapper">
+
+      <header id="header">
+        <div class="logo">
+          <span class="icon fa-gem"></span>
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1 style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 4px; display: inline-block;">Vector Core Advisors</h1>
+            <p>Expert CFO & Controller Services for Growing Businesses</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="main">
+        
+        <section class="hero-container">
+          <img src="assets/images/bg.jpg" alt="Executive Background"> 
+          <div class="hero-text">
+            <div class="glass-box">
+               <h1>Vector Core</h1> 
+               <div class="tagline-box">
+                  <p>Scale With Confidence</p>
+               </div>
+               <br>
+               <a href="#contact" class="cta-button">Secure Consultation</a>
+            </div>
+          </div>
+        </section>
+
+        <article id="intro">
+          <h2 class="major">Intro</h2>
+          <span class="image main"><img src="images/pic01.png" alt="" /></span>
+          <p>This section is already using the template's built-in transparency.</p>
+        </article>
+
+        </div>
+
+      <footer id="footer">
+        <p class="copyright">&copy; Vector Core Advisors.</p>
+      </footer>
+
+    </div>
+
+    <div id="bg"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
