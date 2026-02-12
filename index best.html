@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Vector Core Advisors</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* --- RESTORED FRONT PAGE LOGO --- */
+      #header .logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        border: solid 3px #ffffff !important; 
+        border-radius: 100% !important;
+        width: 6rem !important;
+        height: 6rem !important;
+        transition: transform 0.3s ease;
+      }
+      #header .logo:hover { transform: scale(1.05); }
+      #header .logo img {
+        transform: scale(2.7) translateY(15px);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        filter: invert(1) brightness(2); 
+        position: relative;
+        z-index: 10;
+      }
+
+      /* --- RESTORED HEADER BOX --- */
+      #header .content .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(to bottom right, rgba(10,10,20,0.6), rgba(0,0,0,0.5)) !important;
+        backdrop-filter: blur(15px) !important;      
+        -webkit-backdrop-filter: blur(15px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding: 35px 60px !important; 
+        border-radius: 14px !important;
+        text-align: center;
+        animation: fadeIn 1s ease forwards;
+      }
+
+      #header .content .inner:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 18px 0; 
+        order: 2; 
+      }
+
+      #header h1 {
+        order: 1;
+        font-size: 3.5rem !important;
+        letter-spacing: 6px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        color: #ffffff !important;
+        margin-bottom: 0 !important;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+
+      #header p {
+        order: 3;
+        font-size: 1rem !important;
+        letter-spacing: 1px !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        font-weight: 600 !important;
+        line-height: 1.8 !important;
+        max-width: 850px;
+        margin: 0;
+      }
+
+      .power-white { color: #ffffff !important; font-weight: 900 !important; }
+      .signature-gold { color: #CFAE70 !important; font-weight: 800 !important; }
+
+      /* GLOW EFFECT DEFINITION */
+      .white-glow { 
+        color: #ffffff !important; 
+        font-weight: 800 !important; 
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8) !important;
+        display: block;
+      }
+
+      /* --- NAV BAR FIX --- */
+      nav ul {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 900px !important;
+        margin: 0 auto 0 !important; 
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 4px !important;
+        overflow: hidden !important;
+        background: rgba(0, 0, 0, 0.2) !important;
+      }
+
+      nav ul li {
+        flex: 1 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: stretch !important;
+        min-height: 100px; 
+      }
+
+      nav ul li a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        height: 100% !important;
+        width: 100% !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1.5px !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+      }
+
+      nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #CFAE70 !important; 
+      }
+
+      /* --- ARTICLE STYLES --- */
+      #mission .mission-pop {
+        border-left: 3px solid #CFAE70;
+        padding-left: 2.5rem;
+        margin: 3.5rem 0;
+      }
+      #mission .mission-image-wrap { margin-top: 1.5rem; text-align: center; }
+      #mission .mission-image-wrap img {
+        width: 100%;
+        max-width: 800px;
+        border: 1px solid rgba(207, 174, 112, 0.5);
+      }
+
+      #advantage {
+        background: #000000 !important;
+        padding: 3rem !important;
+        border: 1.5px solid #CFAE70 !important;
+      }
+
+      .property-label {
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        color: #CFAE70;
+        letter-spacing: 3px;
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+
+      .founder-quote {
+        font-style: italic;
+        color: #ffffff !important;
+        margin-bottom: 2rem;
+        border-top: 1.5px solid #CFAE70;
+        border-bottom: 1.5px solid #CFAE70;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      #advantage h3 { color: #CFAE70 !important; font-weight: 800; text-transform: uppercase; margin-top: 1.5rem; }
+      #advantage p { color: #ffffff !important; line-height: 1.8; }
+      .gold-underline { border-bottom: 1.5px solid #CFAE70; padding-bottom: 2px; }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @media screen and (max-width: 736px) {
+        nav ul { flex-direction: column !important; border: none !important; margin-top: 0 !important; }
+        nav ul li { border-right: 0 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; min-height: 60px !important; }
+        #header h1 { font-size: 2.2rem !important; }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="logo"><img src="images/logo.png" alt="Vector Core Logo"></div>
+        <div class="content">
+          <div class="inner">
+            <h1>Vector Core Advisors</h1>
+            <p>
+              <span class="power-white">Real clarity starts with real connection.</span><br />
+              Senior-led precision & hands-on guidance for founders who expect more.<br />
+              This isn’t just a report — <span class="signature-gold">it’s a seat at your table.</span>
+            </p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#mission">Why<br>Vector Core</a></li>
+            <li><a href="#expertise">Our<br>Story</a></li>
+            <li><a href="#advantage">The Vector<br>Advantage</a></li>
+            <li><a href="#contact">Work<br>With Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="main">
+
+        <article id="mission">
+          <span class="property-label">MISSION MANIFESTO</span>
+          <h2 class="major">Why Vector Core Exists</h2>
+          <div class="mission-pop">
+            <p class="power-white" style="font-size: 1.55rem; letter-spacing: 1px; margin: 0; line-height: 1.8;">
+              Our mission is simple: <span class="signature-gold">Fewer</span> clients,<br>
+              <span class="signature-gold">Deeper</span> partnerships, <span class="signature-gold">better</span> decisions.
+            </p>
+          </div>
+          <p>We exist for founders who refuse surface‑level financial guidance. Most firms optimize for volume, not partnership, leaving growing companies with reports instead of direction. Vector Core takes the opposite approach: a deliberately narrow roster, senior‑led oversight, and deep, long‑term collaboration.</p>
+          <p>We help founders see and run their business as an asset, not just an operation. Every decision and every dollar is guided with rigor, perspective, and care — so companies don’t just function; they thrive, ensuring nothing is left on the table.</p>
+          <p>Vector Core exists to turn financial clarity into conviction, and conviction into lasting growth that your business—and your vision—deserve.</p>
+          <div class="mission-image-wrap">
+            <img src="images/alignment-map.png" alt="Strategic Alignment Map">
+          </div>
+        </article>
+
+        <article id="expertise">
+          <h2 class="major">Our Story</h2>
+          
+          <p class="white-glow" style="font-size: 1.5rem; margin-bottom: 2rem;">The Kind of Trust You Call Family</p>
+          
+          <p>Vector Core didn’t begin in a boardroom — it started with a simple idea: to create the kind of firm we would trust with our own family’s business.</p>
+          
+          <p>After years in the accounting world, we saw how impersonal the experience had become. Conversations were rushed, questions went unanswered, and relationships often felt transactional. Business owners deserved more than reports—they deserved true partnership.</p>
+          
+          <p class="white-glow" style="font-size: 1.6rem; text-align: center; margin: 2.5rem 0;">We wanted to build something more human.</p>
+          
+          <p>Vector Core is a family-run firm grounded in accessibility, responsiveness, and genuine respect for the people behind the numbers. We’ve traded the high-volume model for a <span class="signature-gold">“home vibe,”</span> where you’re a priority, not a number. By keeping our circle intentionally small, we ensure every client’s work is handled <span class="signature-gold">directly by senior leadership.</span> With over five years of senior-level experience in audits, reviews, and compilations, we combine deep expertise with the personal attention only a family business can provide.</p>
+          
+          <p>We grow Vector Core the same way we believe businesses should grow — thoughtfully, sustainably, and with the <span class="signature-gold">right people at the table.</span></p>
+        </article>
+
+        <article id="advantage">
+          <span class="property-label">PROPERTY OF VECTOR CORE ADVISORS</span>
+          <h2 class="major">The Vector Advantage</h2>
+          <div class="founder-quote">
+            "Great companies don’t wing it—they move with clarity. Stop making high-stakes decisions on scattered spreadsheets and gut feelings. Measure, move, and multiply. Vector Core gives founders expert financial insight to turn risk into return."
+          </div>
+
+          <h3>1. Senior-Led Accountability</h3>
+          <p><strong>Built for the founder who is tired of being "handed off."</strong> Most firms scale by passing your business to a junior staffer. At Vector Core, your strategy is always handled directly by a Senior Lead with years of high-stakes audit experience. You get the expert, not the assistant.</p>
+
+          <h3>2. Audit-Grade Clarity</h3>
+          <p><strong>Numbers you can actually trust.</strong> We look beyond surface bookkeeping to find hidden risks and tax gaps. We turn your records into a foundation of financial integrity that lenders, partners, and future buyers can rely on. No more "what happened?" moments—just clean, bank-ready numbers.</p>
+
+          <h3>3. Answers for Your Hardest Decisions</h3>
+          <p><strong>Moving from "Speculation" to "Strategy."</strong> Can we afford to hire? Is it time to buy that next property? How much runway do we truly have? We help you run the numbers before you commit your capital, giving you the data you need to move with 100% confidence.</p>
+
+          <h3>4. The Net-Asset Standard</h3>
+          <p><strong>Turning overhead into an investment.</strong> If your finance team isn't finding ways to save you money or protect your margins, they are just an expense. Our goal is to uncover enough value to not only offset our fees but to actively drive new profitability. <span class="gold-underline"><strong>We transform your accounting department from a monthly cost into a high-yield investment.</strong></span></p>
+        </article>
+
+        <article id="contact">
+          <h2 class="major">Work With Us</h2>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field half"><input type="text" name="name" id="name" placeholder="Name" /></div>
+              <div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
+              <div class="field"><textarea name="message" id="message" rows="4" placeholder="Message"></textarea></div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send Message" class="primary" /></li>
+            </ul>
+          </form>
+        </article>
+      </div>
+
+      <footer id="footer">
+        <p class="copyright">&copy; Vector Core Advisors. All rights reserved.</p>
+      </footer>
+    </div>
+    <div id="bg"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
